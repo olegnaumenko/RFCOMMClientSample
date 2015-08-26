@@ -100,6 +100,7 @@
     else
     {
         [chatDisconnectButton setEnabled:TRUE];
+        [chatConnectButton setEnabled:FALSE];
         [chatInputTextField setEnabled:TRUE];
         [myBluetoothInterface registerForNewData:self action:@selector(chatHandleNewData:)];
     }
