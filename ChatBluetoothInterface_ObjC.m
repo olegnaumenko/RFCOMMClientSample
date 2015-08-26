@@ -122,6 +122,9 @@
 	else
 	{
 		NSLog( @"Error: 0x%lx - unable to open RFCOMM channel.\n", status );
+        if (status == kIOReturnExclusiveAccess) {
+            NSLog(@"Exclusive Access!!!");
+        }
 	}
 	
 exit:

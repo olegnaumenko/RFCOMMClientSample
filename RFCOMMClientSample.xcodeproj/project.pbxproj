@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C75A6221B8DAD0800015153 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C75A6211B8DAD0800015153 /* IOKit.framework */; };
 		9A2EF77F07A863FE00258FA4 /* ChatBluetoothInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 317A482A027DEBC805CD2B62 /* ChatBluetoothInterface.h */; };
 		9A2EF78007A863FE00258FA4 /* ChatClientController.h in Headers */ = {isa = PBXBuildFile; fileRef = 317A482C027DEBC805CD2B62 /* ChatClientController.h */; };
 		9A2EF78107A863FE00258FA4 /* ChatBluetoothInterface_ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D1953A0455F0B200CD2B6C /* ChatBluetoothInterface_ObjC.h */; };
@@ -52,6 +53,8 @@
 		317A482E027DEBC805CD2B62 /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		317A4835027DEC8105CD2B62 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = /System/Library/Frameworks/IOBluetooth.framework; sourceTree = "<absolute>"; };
 		40DE5C98029AFF9D05CD2B6C /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = /System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = "<absolute>"; };
+		7C4E4FE61B8DC03E00A85BC2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		7C75A6211B8DAD0800015153 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		9A2EF78F07A863FE00258FA4 /* RFCOMMClientSample_ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RFCOMMClientSample_ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2EF79107A8642B00258FA4 /* ObjC_Target_Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = ObjC_Target_Info.plist; sourceTree = SOURCE_ROOT; };
 		9A2EF7AB07A8647A00258FA4 /* RFCOMMClientSample_C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RFCOMMClientSample_C.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C75A6221B8DAD0800015153 /* IOKit.framework in Frameworks */,
 				9A2EF78B07A863FE00258FA4 /* Cocoa.framework in Frameworks */,
 				9A2EF78C07A863FE00258FA4 /* IOBluetooth.framework in Frameworks */,
 				9A2EF78D07A863FE00258FA4 /* IOBluetoothUI.framework in Frameworks */,
@@ -159,6 +163,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C4E4FE61B8DC03E00A85BC2 /* CoreBluetooth.framework */,
+				7C75A6211B8DAD0800015153 /* IOKit.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -327,6 +333,7 @@
 		9A4E6E9C08BA767A00AC9CD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -337,6 +344,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = RFCOMMClientSample_ObjC;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -361,6 +369,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = RFCOMMClientSample_ObjC;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -385,6 +394,7 @@
 				INFOPLIST_FILE = C_Target_Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = RFCOMMClientSample_C;
+				SDKROOT = macosx10.9;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -411,6 +421,7 @@
 				INFOPLIST_FILE = C_Target_Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = RFCOMMClientSample_C;
+				SDKROOT = macosx10.9;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
