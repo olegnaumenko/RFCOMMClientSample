@@ -143,6 +143,7 @@
 - (void)chatHandleRemoteDisconnection
 {
     [chatDisconnectButton setEnabled:FALSE];
+    [chatConnectButton setEnabled:TRUE];
     [chatInputTextField setEnabled:FALSE];
     
     [myBluetoothInterface registerForNewData:nil action:nil];
